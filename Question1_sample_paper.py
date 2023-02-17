@@ -33,3 +33,15 @@ PrintArray(TheData)
 InsertionSort(TheData)
 print("The data after sorting ")
 PrintArray(TheData)
+
+#1 (e)
+
+def Search(number):
+    for i in range(len(TheData)):
+        
+        if number == TheData[i]:
+            print("Found")
+            return True
+    else:
+        print("Not found")
+        return False
