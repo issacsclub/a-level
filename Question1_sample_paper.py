@@ -45,3 +45,6 @@ def Search(number):
     else:
         print("Not found")
         return False
+    
+Search(8)
+Search(9)
