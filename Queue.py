@@ -26,10 +26,19 @@ def enQueue(item):
         queue[rearPointer] = item
     else:
         print("Queue is full, cannot enqueue")
+
         
 # Test enqueue procedure      
+enQueue(8)
+enQueue(5)
+enQueue(3)
+enQueue(7)
+enQueue(6)
+enQueue(4)
 enQueue(10)
-enQueue(11)
+enQueue(12)
+enQueue(15)
+enQueue(80)
 
 # deleting items
 def deQueue():
@@ -43,5 +52,5 @@ def deQueue():
         else:
             frontPointer = frontPointer + 1
     queueLength = queueLength -1
-    
-deQueue()
+
+
