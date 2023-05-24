@@ -28,3 +28,23 @@ for i in range(1,21):
         
     else:
         print("Unsuccessful")
+ 
+# 3 d
+        
+def recursive(start):    
+    if start== 0:
+        return queue[start]
+    else:
+        return queue[start] + recursive(start - 1 )
+    
+# 3 e
+print(recursive(0))
+
+print(recursive(tailPointer-1))
+
+    
+    
+
+    
+    
+        
