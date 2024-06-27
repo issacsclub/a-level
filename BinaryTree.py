@@ -44,9 +44,9 @@ def node_add(item_add):
                 my_tree[old_pointer].left_pointer = item_add_pointer
             else:
                 my_tree[old_pointer].right_pointer = item_add_pointer
-    my_tree[item_add_pointer].left_pointer = null_pointer
-    my_tree[item_add_pointer].right_pointer = null_pointer
-    my_tree[item_add_pointer].item = item_add
+        my_tree[item_add_pointer].left_pointer = null_pointer
+        my_tree[item_add_pointer].right_pointer = null_pointer
+        my_tree[item_add_pointer].item = item_add
 
 
 
