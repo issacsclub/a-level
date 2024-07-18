@@ -1,22 +1,23 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Nov  2 10:11:44 2023
+Created on Mon Jul  1 09:14:18 2024
 
 @author: Support
 """
 
-length = int(input("Enter the length "))
-breadth = int(input("Enter the value of breadth "))
+DataArray = [9,3,5,1,2,13,6,10,11,12]
 
-area = length * breadth
-perimeter  =  2 * (length  + breadth)
+swap = True
 
-print("the area is ", area)
-print("The perimeter is ", perimeter )
+top = len(DataArray)
 
-
-number1 =  int(input("Entrer a number "))
-number2 =  int(input("Entrer a number "))
-
-product = number1 * number2
-print("The product is ", product)
+while swap == True or top > 0:
+    swap = False
+    for index in range(top-1):
+        if DataArray[index] > DataArray[index+1]:
+            temp = DataArray[index]
+            DataArray[index] = DataArray[index+1]
+            DataArray[index+1] = temp
+            swap = True
+    top = top - 1
+print(DataArray)
