@@ -25,5 +25,44 @@ def Enqueue(DataToInsert):
     QueueTail = QueueTail + 1
     QueueData[QueueTail] = DataToInsert
     return True
-Enqueue(12)
+
+
+def Dequeue():
+    global QueueHead
+    global QueueTail
+    global QueueData
+    
+    if QueueHead < 0:
+        return False
+    else:
+        QueueHead = QueueHead +1
+    
+        return QueueData[QueueHead-1]
+
+
+def StoreItems():
+    
+    global QueueHead,QueueTail, QueueData
+    invalidCount = 0
+    for i in range(10):
+        string = input("Enter the first string ")
+        total = int(string[0])*1 + int(string[1])*3 + int(string[2])*1+int(string[3])*3 + int(string[4])*1 + int(string[5])*3
+        total = int(total / 10) 
+        if total==int(string[6]) or tota
+    
+    
+    
+    
+    
+    
+    
+    
+    
 Enqueue(45)
+Enqueue(5)
+Enqueue(4)
+
+nextValue = Dequeue()
+print("The next value ", nextValue)
+
+
