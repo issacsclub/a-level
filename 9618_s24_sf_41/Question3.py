@@ -26,8 +26,6 @@ def Enqueue(DataToInsert):
     QueueData[QueueTail] = DataToInsert
     return True
 
-Enqueue(12)
-Enqueue(45)
 
 
 
