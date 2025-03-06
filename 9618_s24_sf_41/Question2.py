@@ -14,4 +14,28 @@ class Tree:
         self.__MaxHeight = MaxHeight
         self.__MaxWidth = MaxWidth
         self.__Evergreen = Evergreen
+    def GetTreeName(self):
+        return self.__TreeName
+    
+    def GetGrowth(self):
+        return self.__HeightGrowth
+
+
+def ReadData():
+    TreeData= []
+    FileName = "Trees.txt"
+    Array2 = []
+    try:
+        File = open(FileName, 'r')
+        for i in range(9):
+            
+            Array2.append(File.readline().split(","))
+            
+    except:
+        print("no such file ")
+    
+        
+        
+ReadData()
+            
     
