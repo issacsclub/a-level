@@ -1,31 +1,24 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Jul 16 14:06:13 2024
+Created on Tue May 13 15:40:58 2025
 
 @author: Support
 """
 
-class TstudentRecord:
-    def __init__(self,name, adress, className):
-        self.name = name
-        self.adress = adress
-        self.className = className
-        
-def appendRecord():
-    terminator = 200
-    fileName = "StudentRecord.txt"
-    file  = open(fileName, 'w')
-    while terminator != -1:
-        terminator = int(input("Do you wish to exit, press -1 "))
-        if terminator == -1:
-            break
-        else:
-        
-            name = input("Enter your name ")
-            adress = input("Enter your adress ")
-            className = input("Enter your class name ")
-            string1 = name +"_"+adress +"_" + className
-            file.writelines(string1 + "\n")
-    file.close()
-appendRecord()   
-    
+Numbers = [45,8,3,1,5,10,56,11,18,9]
+print("Before", Numbers)
+lowerBound = 0
+upperBound = 9
+index = 0
+swap = False
+while swap==False or index <= upperBound:
+    for count in range(9):
+        if Numbers[count] > Numbers[count+1]:
+            temp = Numbers[count]
+            Numbers[count] = Numbers[count+1]
+            Numbers[count+1] = temp
+            swap = True
+            
+    index = index+1
+         
+print("After", Numbers)           
