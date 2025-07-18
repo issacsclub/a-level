@@ -9,9 +9,6 @@ class shape:
     def __init__(self):
       self.__areaValue = 0
       self.__perimeterValue = 0
-      
-    def __del__(self):
-        print("Shape has been deleted")
     def area(self):
       print("Area ", self.__areaValue)
     def perimeter(self):
@@ -28,15 +25,29 @@ class rectangle(shape):
       self.__areaValue = self.__length * self.__breadth
       print("Area ", self.__areaValue)
 class circle(shape):
-    def __init__(self, radius):
+    def __init__(self, radius, pi=3.14): # overloading, circle can be called with/without pi
       shape.__init__(self)
       self.__radius = radius
+      self.pi = pi
     def area (self):
-      self.__areaValue = self.__radius * self.__radius * 3.142
+      self.__areaValue = self.__radius * self.__radius *self.pi
       print("Area ", self.__areaValue)
-myCircle = circle(20)
+      
+class Square(shape):
+    def __init__(self, length):
+      shape.__init__(self)
+      self.__length = length
+     
+    def area (self):
+      self.__areaValue = self.__length * self.__length
+      print("Area ", self.__areaValue)
+      
+myCircle = circle(20,22/7)
 myCircle.area()
 
 myRectangle = rectangle (10,17)
 myRectangle.area()
-del myRectangle
+
+mySquare = Square (10)
+mySquare.area()
+
