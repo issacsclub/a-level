@@ -1,22 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Jul  1 09:11:01 2025
+Created on Tue Aug 26 16:15:13 2025
 
 @author: Support
 """
+import pandas as pd
+Array= [[None for i in range(4)] for j in range(6)]
 
-def factorialIterative(number):
-    if number == 0:
-        answer = 1
-    else:
+ArrayPd = pd.DataFrame(Array)
+print(ArrayPd)
 
-        answer = 1
-        for i in range(1, number+1):
-            print("i", i)
-            answer =  answer*i
-            print("answere", answer)
-            
-    return answer
-
-print(factorialIterative(0))
-print(factorialIterative(5))
+for row in range()
