@@ -1,19 +1,15 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Jun  5 15:44:36 2025
+Created on Fri Sep 19 12:32:29 2025
 
 @author: Support
 """
 
-class employee:
-    
-    def __init__(self,name, staffNo):
-        self.__name = name #private attribute
-        self.staffNo = staffNo #public
+count = 0
+number = 8000.0
+while number != 9999.9:
+    number = float(input("Enter a number "))
+    if number > 100:
+        count = count + 1
         
-        
-    def showDetails(self):
-        print("Employee Name: ", self.name)
-        print("Employee Number: ", self.staffNo)
-        
-myStaff = employee("Eric Jones", 7878)
+print("Numbers greater than 100 ", count-1)
