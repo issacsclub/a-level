@@ -9,7 +9,7 @@ myFile = "myText.txt"
 
 file=open(myFile, 'w')
 
-textLine = "######"
+textLine = "initial"
 
 while textLine != "":
     textLine = input("Enter a line and press enter ")
