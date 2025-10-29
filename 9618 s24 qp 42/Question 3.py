@@ -61,3 +61,24 @@ def IterativeInsertion(IntegerArray,NumberElements):
 SortedArrayIterative = IterativeInsertion(NumberArray,7)
 print("Iterative", SortedArrayIterative)
 #IterativeInsertion(NumberArray,7)
+
+
+def BinarySearch(IntegerArray,First, Last,ToFind):
+    if First > Last:
+        return -1
+    else:
+        index = int((First+Last)/2)
+        if ToFind == IntegerArray[index]:
+            return index
+        elif ToFind > IntegerArray[index]:
+            return BinarySearch(IntegerArray,index+1, Last,ToFind)
+        else:
+            return BinarySearch(IntegerArray, First, index-1, ToFind)
+        
+        
+Position  = BinarySearch(SortedArrayIterative, 0, 6, 644)
+if Position == -1:
+    print("Item not found")
+else:
+    print("Found in Position ", Position)
+            
